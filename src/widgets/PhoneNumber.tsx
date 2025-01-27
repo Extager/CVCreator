@@ -2,8 +2,8 @@ import UIPhoneNumber from "../shared/ui/UIPhoneNumber";
 import useSendPhoneNumber from "../features/PhoneNumber";
 
 export default function PhoneNumber(){
-    useSendPhoneNumber();
+    const {phoneNumber, setPhoneNumber} = useSendPhoneNumber();
     return(
-        <UIPhoneNumber />
+        <UIPhoneNumber value={phoneNumber} onChange={setPhoneNumber}/>
     )
 }

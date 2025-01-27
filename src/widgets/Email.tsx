@@ -2,8 +2,8 @@ import UIEmail from "../shared/ui/UIEmail";
 import useSendEmail from "../features/Email";
 
 export default function Email(){
-    useSendEmail();
+    const {email, setEmail} = useSendEmail();
     return(
-        <UIEmail />
+        <UIEmail value={email} onChange={setEmail}/>
     )
 }
