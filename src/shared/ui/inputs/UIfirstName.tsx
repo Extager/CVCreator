@@ -1,5 +1,5 @@
 import React from "react";
-import { Inputs } from "../../interfaces/Input";
+import { Inputs } from "../../../interfaces/Input";
 
 const UIfirstName:React.FC<Inputs> = ({value, onChange}) => {
     return(

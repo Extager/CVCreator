@@ -1,4 +1,4 @@
-import UIPhoneNumber from "../shared/ui/UIPhoneNumber";
+import UIPhoneNumber from "../shared/ui/inputs/UIPhoneNumber";
 import useSendPhoneNumber from "../features/PhoneNumber";
 
 export default function PhoneNumber(){

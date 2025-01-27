@@ -1,4 +1,4 @@
-import UIEmail from "../shared/ui/UIEmail";
+import UIEmail from "../shared/ui/inputs/UIEmail";
 import useSendEmail from "../features/Email";
 
 export default function Email(){

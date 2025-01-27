@@ -1,4 +1,4 @@
-import UIfirstName from "../shared/ui/UIfirstName";
+import UIfirstName from "../shared/ui/inputs/UIfirstName";
 import useSendFirstName from "../features/FirstName";
 
 export default function FirstName(){

@@ -1,16 +1,16 @@
 import React from "react";
-import { Inputs } from "../../interfaces/Input";
+import { Inputs } from "../../../interfaces/Input";
 
-const UITitle:React.FC<Inputs> =({value, onChange}) =>{
+const UIEmail:React.FC<Inputs> = ({value, onChange}) => {
     return(
         <div>
             <input 
-            type="text"
-            placeholder='Title'
+            type="email" 
+            placeholder='Email'
             value={value}
             onChange={(e)=>onChange(e.target.value)}
             />
         </div>
     );
 }
-export default UITitle;
+export default UIEmail;
