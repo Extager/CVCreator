@@ -1,5 +1,5 @@
 import React from "react";
-import UIAddress from "../compontents/ui/inputs/UIAddress";
+import UIAddress from "../shared/ui/UIAddress";
 import useSendAddress from "../features/Address";
 
 export default function Address() {

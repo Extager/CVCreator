@@ -1,5 +1,5 @@
 import useSendDescription from "../features/Description";
-import UIDescrtiption from "../compontents/ui/inputs/UIDescrtiption";
+import UIDescrtiption from "../shared/ui/UIDescrtiption";
 
 export default function Description (){
     useSendDescription();

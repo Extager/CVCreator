@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import App from './App';
-import NotFound from "./not-found";
+import App from '../../pages/App';
+import NotFound from "../../pages/not-found";
 
 export default function Routing(){
     return(

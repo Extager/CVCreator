@@ -1,4 +1,4 @@
-import UIlastName from "../compontents/ui/inputs/UIlastName";
+import UIlastName from "../shared/ui/UIlastName";
 import useSendLastName from "../features/LastName";
 
 export default function LastName(){
