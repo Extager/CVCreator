@@ -1,5 +1,7 @@
 import React from "react";
 import { Inputs } from "../../../interfaces/Input";
+import { observer } from "mobx-react-lite";
+import ResumeStore from "../../../store/ResumeStore";
 
 const UIEmail:React.FC<Inputs> = ({value, onChange}) => {
     return(
@@ -8,9 +10,9 @@ const UIEmail:React.FC<Inputs> = ({value, onChange}) => {
             type="email" 
             placeholder='Email'
             value={value}
-            onChange={(e)=>onChange(e.target.value)}
+            onChange={(e)=>onChange(ResumeStore.email = e.target.value)}
             />
         </div>
     );
 }
-export default UIEmail;
+export default observer(UIEmail);

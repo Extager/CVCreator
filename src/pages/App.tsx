@@ -5,8 +5,10 @@ import FirstName from "../widgets/FirstName"
 import LastName from "../widgets/LastName"
 import PhoneNumber from "../widgets/PhoneNumber"
 import Title from "../widgets/Title"
+import CV from "../shared/ui/CV/CV"
 
 export function App() {
+  
   return (
     <div className="w-screen h-screen">
       <Address />
@@ -16,6 +18,7 @@ export function App() {
       <LastName />
       <PhoneNumber />
       <Title />
+      <CV />
     </div>
   )
 }

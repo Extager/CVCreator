@@ -1,5 +1,7 @@
 import React from "react";
 import { Inputs } from "../../../interfaces/Input";
+import { observer } from "mobx-react-lite";
+import ResumeStore from "../../../store/ResumeStore";
 
 const UIPhoneNumber:React.FC<Inputs> =({value, onChange}) =>{
     return(
@@ -7,8 +9,9 @@ const UIPhoneNumber:React.FC<Inputs> =({value, onChange}) =>{
             <input 
             type="tel" 
             placeholder='Phone number'
-            onChange={(e)=>{onChange(e.target.value)}}/>
+            value={value}
+            onChange={(e)=>{onChange(ResumeStore.phoneNumber = e.target.value)}}/>
         </div>
     );
 }
-export default UIPhoneNumber;
+export default observer(UIPhoneNumber);

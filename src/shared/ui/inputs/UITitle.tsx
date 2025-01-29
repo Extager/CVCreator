@@ -1,5 +1,7 @@
 import React from "react";
 import { Inputs } from "../../../interfaces/Input";
+import { observer } from "mobx-react-lite";
+import ResumeStore from "../../../store/ResumeStore";
 
 const UITitle:React.FC<Inputs> =({value, onChange}) =>{
     return(
@@ -8,9 +10,9 @@ const UITitle:React.FC<Inputs> =({value, onChange}) =>{
             type="text"
             placeholder='Title'
             value={value}
-            onChange={(e)=>onChange(e.target.value)}
+            onChange={(e)=>onChange(ResumeStore.title = e.target.value)}
             />
         </div>
     );
 }
-export default UITitle;
+export default observer(UITitle);
