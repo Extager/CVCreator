@@ -5,7 +5,7 @@ import FirstName from "../widgets/FirstName"
 import LastName from "../widgets/LastName"
 import PhoneNumber from "../widgets/PhoneNumber"
 import Title from "../widgets/Title"
-import CV from "../shared/ui/CV/CV"
+import CV from "../shared/ui/CV/UICV"
 
 export function App() {
   
