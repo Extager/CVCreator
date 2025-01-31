@@ -3,3 +3,15 @@
         background-color: black;
     }
 }
+.cv
+{
+    color:black;
+
+}
+.save-btn
+{
+    background-color: green;
+    border-radius: 90px;
+    padding: 4px;
+    border: 1px black solid;
+}

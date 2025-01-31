@@ -9,6 +9,7 @@ class ResumeStore {
   lastName: string = "Last Name";
   phoneNumber: string = "Phone Number";
   title: string = "Title";
+  image: File | null = null;
 
   constructor() {
     makeAutoObservable(this);
@@ -22,6 +23,9 @@ class ResumeStore {
     this.lastName = data.lastName ?? this.lastName;
     this.phoneNumber = data.phoneNumber ?? this.phoneNumber;
     this.title = data.title ?? this.title;
+  }
+  setImage(image: File | null){
+    this.image = image;
   }
 }
 

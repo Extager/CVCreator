@@ -12,28 +12,36 @@ const UICV = () => {
     documentTitle: "YourCV",
     bodyClass: "print-style",
   });
+
+  const imageURL = ResumeStore.image ? URL.createObjectURL(ResumeStore.image) : "";
+
   return (
     <div>
-      <div ref={contentRef}>
+      <div ref={contentRef} className="cv">
         <h2>{ResumeStore.title}</h2>
-        <p>
+        {ResumeStore.image ? (
+          <img src={imageURL} alt="image" />
+        ) : (
+          <p>Изображение отсутствует</p>
+        )}
+        <p >
           <strong>Name:</strong> {ResumeStore.firstName} {ResumeStore.lastName}
         </p>
-        <p>
+        <p >
           <strong>Email:</strong> {ResumeStore.email}
         </p>
-        <p>
+        <p >
           <strong>Phone:</strong> {ResumeStore.phoneNumber}
         </p>
-        <p>
+        <p >
           <strong>Address:</strong> {ResumeStore.address}
         </p>
-        <p>
+        <p >
           <strong>Description:</strong> {ResumeStore.description}
         </p>
       </div>
 
-      <button onClick={()=>contentSave()}>Save/Print</button>
+      <button onClick={()=>contentSave()} className="save-btn">Save/Print</button>
     </div>
   );
 };
