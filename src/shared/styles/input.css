@@ -1,0 +1,17 @@
+input
+{
+    color:black;
+
+    outline: none !important;
+    
+    ::placeholder
+    {
+        color:black;
+        opacity: 0.5;
+    }
+    background-color: #D9D9D9;
+    margin-bottom: 16px;
+    border-radius: 90px;
+    width: 700px;
+    
+}
