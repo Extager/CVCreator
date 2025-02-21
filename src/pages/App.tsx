@@ -1,8 +1,10 @@
+import Inputs from "../widgets/Inputs"
+
 function App() {
 
   return (
     <div>
-      <p>Hello, World</p>
+      <Inputs />
     </div>
   )
 }
