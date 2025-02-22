@@ -1,4 +1,6 @@
-import FCEmail from "../features/Email";
+import FCEmail from "../../features/Email";
+import { observer } from "mobx-react-lite";
+import CVStore from "../../store/CV";
 
 const Email = () => {
     const { email, setEmail } = FCEmail(); 
@@ -9,10 +11,10 @@ const Email = () => {
                 type="text"
                 placeholder="Email"
                 value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                onChange={(e) => setEmail(CVStore.email = e.target.value)}
             />
         </div>
     );
 };
 
-export default Email;
+export default observer(Email);
