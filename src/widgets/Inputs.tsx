@@ -8,16 +8,19 @@ import Title from "../entities/Inputs/Title";
 
 export default function Inputs(){
     return(
-        <div>
-            <p>СV creator</p>
-            <p>Personal information</p>
-            <Title />
-            <FirstName />
-            <LastName />
-            <Description />
-            <Address />
-            <Email />
-            <PhoneNumber />
+        <div className="flex flex-col w-[50vw] h-screen py-5">
+            <p className="text-3xl font-medium text-center mb-[2.625rem]">СV Creator</p>
+            <div className="px-[5.188rem]">
+                <p className="text-2xl">Personal information</p>
+                <Title />
+                <FirstName />
+                <LastName />
+                <Description />
+                <Address />
+                <Email />
+                <PhoneNumber />
+
+            </div>
         </div>
     );
 }

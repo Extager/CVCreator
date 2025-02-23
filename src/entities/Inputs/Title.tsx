@@ -1,6 +1,7 @@
 import FCTitlte from "../../features/Title";
 import { observer } from "mobx-react-lite";
 import CVStore from "../../store/CV";
+import '../../shared/styles/Input.css'
 
 const Title = () =>{
     const {title, setTitle} = FCTitlte();
@@ -11,7 +12,10 @@ const Title = () =>{
             type="text"
             placeholder="Title"
             value={title}
-            onChange={(e)=>setTitle(CVStore.title = e.target.value)}/>
+            onChange={(e)=>setTitle(CVStore.title = e.target.value)}
+            
+            required
+            />
         </div>
     )
 }

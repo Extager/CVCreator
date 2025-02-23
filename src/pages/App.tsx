@@ -4,7 +4,7 @@ import CV from "../entities/CV/CV"
 function App() {
 
   return (
-    <div>
+    <div className="flex">
       <Inputs />
       <CV />
     </div>

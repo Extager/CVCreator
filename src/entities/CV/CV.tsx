@@ -14,8 +14,8 @@ const CV = () => {
 
 
     return(
-        <div ref={contentRef}>
-            <p>{CVStore.title}</p>
+        <div ref={contentRef} className="w-[50vw] flex flex-col h-screen bg-white text-black">
+            <p className="text-center">{CVStore.title}</p>
             <p>
                 <strong>Name: </strong> {CVStore.firstName} {CVStore.lastName}
             </p>

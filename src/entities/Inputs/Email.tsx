@@ -1,6 +1,7 @@
 import FCEmail from "../../features/Email";
 import { observer } from "mobx-react-lite";
 import CVStore from "../../store/CV";
+import '../../shared/styles/Input.css'
 
 const Email = () => {
     const { email, setEmail } = FCEmail(); 
@@ -8,10 +9,11 @@ const Email = () => {
     return (
         <div>
             <input
-                type="text"
+                type="email"
                 placeholder="Email"
                 value={email}
                 onChange={(e) => setEmail(CVStore.email = e.target.value)}
+                required
             />
         </div>
     );
