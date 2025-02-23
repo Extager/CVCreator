@@ -14,7 +14,7 @@ const PhoneNumber = () =>{
             value={phonenumber}
             onChange={(e)=>setPhonenumber(CVStore.phonenumber = e.target.value)}
             maxLength={11}
-            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+            pattern="[0-9]{3}[0-9]{3}[0-9]{4}"
             required
             />
         </div>
