@@ -1,3 +1,4 @@
+import AddExp from "../entities/AddExp";
 import Address from "../entities/Inputs/Address";
 import Description from "../entities/Inputs/Description";
 import Email from "../entities/Inputs/Email";
@@ -19,7 +20,8 @@ export default function Inputs(){
                 <Address />
                 <Email />
                 <PhoneNumber />
-
+                <p className="text-2xl">Work Experience</p>
+                <AddExp />
             </div>
         </div>
     );

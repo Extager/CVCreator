@@ -42,6 +42,16 @@ const CV = () => {
                 <p>{CVStore.description}</p>
                 <hr />
                 <p>Work Experience</p>
+                {Object.keys(CVStore.experience).map((id)=>{
+                    const el = CVStore.experience[id];
+                    return(
+                        <div key={id}>
+                            <span>{id}. </span>
+                            <span>{el[0]}</span>
+                            <p>{el[1]}</p>
+                        </div>
+                    );
+                })}
             </div>
 
             <div className="flex">
