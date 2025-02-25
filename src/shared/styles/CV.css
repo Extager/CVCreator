@@ -4,8 +4,16 @@
         width: 100vw;
         margin: 0;
     }
-    .save
+    .w-\[50vw\]
+    {
+        width: 100vw;
+    }
+    .btn-id
     {
         display: none;
+    }
+    .h-auto
+    {
+        height: 100vh;
     }
 }

@@ -4,6 +4,7 @@ import Describe from "./Inputs/Describe";
 import FCShowed from "../features/Showed";
 import Switch from "./Switch";
 import CVStore from "../store/CV";
+import '../shared/styles/Btn.css';
 
 const AddExp = observer(() => {
     const { show, setShow } = FCShowed();
@@ -17,9 +18,10 @@ const AddExp = observer(() => {
                         <Switch />
                 </div>
             ) : (
-                <div className="flex justify-center items-center">
+                <div className="flex pl-[5.188rem] pt-5 items-center">
                     <button
                     onClick={() => setShow(true)}
+                    className="btn-id"
                     >Add</button>
                 </div>
             )}
