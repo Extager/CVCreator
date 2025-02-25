@@ -6,6 +6,7 @@ import LastName from "../entities/Inputs/LastName";
 import PhoneNumber from "../entities/Inputs/PhoneNumber";
 import Title from "../entities/Inputs/Title";
 import AddExp from "../entities/AddExp";
+import Image from "../entities/Inputs/Image";
 
 export default function Inputs(){
     return(
@@ -20,6 +21,7 @@ export default function Inputs(){
                 <Address />
                 <Email />
                 <PhoneNumber />
+                <Image />
                 <p className="text-2xl">Work Experience</p>
             </div>
                 <AddExp />

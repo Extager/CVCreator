@@ -9,12 +9,13 @@ class Store {
     lastName: string = "Last Name";
     phonenumber: string = "Phone Number";
     title: string = "Title";
+    img:File | null = null;
     experience: {[key: string]: [string, string] } = {
         1: ["", ""],
         2: ["", ""],
         3: ["", ""],
     };
-
+    
     constructor(){
         makeAutoObservable(this);
     }
@@ -35,6 +36,10 @@ class Store {
         if (this.id > 1) {
             this.id--;
         }
+    }
+
+    setImg(image:File | null){
+        this.img = image;
     }
         
 }

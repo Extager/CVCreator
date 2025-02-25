@@ -4,7 +4,7 @@ import { useReactToPrint } from "react-to-print";
 import CVStore from "../../store/CV";
 import '../../shared/styles/CV.css';
 import '../../shared/styles/Btn.css';
-
+import Avatar from '../../shared/img/avatar.svg';
 const CV = () => {
     const contentRef = useRef<HTMLDivElement>(null);
 
@@ -14,13 +14,34 @@ const CV = () => {
         bodyClass: "print-style",
     })
 
+    const imageURL = CVStore.img ? URL.createObjectURL(CVStore.img) : "";
+
 
     return(
         <div ref={contentRef} className="w-[50vw] flex h-auto justify-center bg-white text-black px-5 py-5">
             <div className="w-[25%] flex flex-col gap-3 pr-1 border-r">
-                <img src="#" alt="Photo" />
+                {imageURL != ""?
+                (
+                    <>
+                        <img
+                        src={imageURL}
+                        alt="YourIMG" 
+                        className="w-[100px] h-[100px] rounded-4xl"/>
+                    </>
+                )
+                :
+                (
+                    <>
+                        <img
+                        src={Avatar}
+                        alt="Avatar img"
+                        className="w-[100px] h-[100px]"
+                        />                    
+                    </>
+                )
+                }
 
-                <p className="font-medium text-xl">PERSONAL DETAILS</p>
+                <p className="font-medium text-xl text-pretty max-lg:text-balance">PERSONAL DETAILS</p>
                 <p className="font-medium text-lg">Name</p>
                 <p className="font-thin mb-2">
                     {CVStore.firstName} {CVStore.lastName}
@@ -31,7 +52,7 @@ const CV = () => {
                     {CVStore.address}
                 </p>
 
-                <p className="font-medium">Phone number</p>
+                <p className="font-medium text-pretty max-lg:text-balance">Phone number</p>
                 <p className="font-thin mb-2">{CVStore.phonenumber}</p>
 
                 <p className="font-medium">Email</p>
@@ -61,8 +82,8 @@ const CV = () => {
                         return(
                             <div key={id}>
                                 <span className="font-medium">{id}. </span>
-                                <span className="font-bold">{el[0]}</span>
-                                <p className="mb-5 font-thin">{el[1]}</p>
+                                <span className="font-bold text-pretty max-lg:text-balance">{el[0]}</span>
+                                <p className="mb-5 font-thin text-pretty max-lg:text-balance">{el[1]}</p>
                             </div>
                         );
                     }
