@@ -13,6 +13,7 @@ const PhoneNumber = () =>{
             placeholder="Phone Number"
             value={phonenumber}
             onChange={(e)=>setPhonenumber(CVStore.phonenumber = e.target.value)}
+            className="w-[73%] h-[4%]"
             maxLength={11}
             pattern="[0-9]{3}[0-9]{3}[0-9]{4}"
             required

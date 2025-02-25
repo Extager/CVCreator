@@ -1,4 +1,3 @@
-import AddExp from "../entities/AddExp";
 import Address from "../entities/Inputs/Address";
 import Description from "../entities/Inputs/Description";
 import Email from "../entities/Inputs/Email";
@@ -6,6 +5,7 @@ import FirstName from "../entities/Inputs/FirstName";
 import LastName from "../entities/Inputs/LastName";
 import PhoneNumber from "../entities/Inputs/PhoneNumber";
 import Title from "../entities/Inputs/Title";
+import AddExp from "../entities/AddExp";
 
 export default function Inputs(){
     return(
@@ -21,8 +21,8 @@ export default function Inputs(){
                 <Email />
                 <PhoneNumber />
                 <p className="text-2xl">Work Experience</p>
-                <AddExp />
             </div>
+                <AddExp />
         </div>
     );
 }

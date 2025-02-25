@@ -1,0 +1,10 @@
+.btn-id
+{
+    background-color: #D9D9D9;
+    padding: 1px 5px 1px 5px;
+    border: 1px solid black;
+    box-sizing: border-box;
+    border-radius: 90px;
+    color:rgb(0, 0 ,0, 0.5);
+    width: 10rem;
+}

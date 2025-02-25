@@ -7,13 +7,13 @@ const Title = () =>{
     const {title, setTitle} = FCTitlte();
 
     return(
-        <div>
+        <div className="">
             <input
             type="text"
             placeholder="Title"
             value={title}
             onChange={(e)=>setTitle(CVStore.title = e.target.value)}
-            
+            className="w-[73%] h-[4%]"
             required
             />
         </div>

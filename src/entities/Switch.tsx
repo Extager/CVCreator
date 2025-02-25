@@ -1,18 +1,20 @@
 import { observer } from "mobx-react-lite";
 import CVStore from "../store/CV";
+import '../shared/styles/Btn.css';
 
 const Switch = observer(() => {
     return (
-        <div className="flex w-full justify-between">
+        <div className="flex justify-between w-[73%]">
             <button
-                className=""
-                onClick={() => CVStore.prevID()} 
+                onClick={() => CVStore.prevID()}
+                className="btn-id" 
             >
                 Previous
             </button>
 
             <button
-                onClick={() => CVStore.nextId()} 
+                onClick={() => CVStore.nextId()}
+                className="btn-id" 
             >
                 Next
             </button>

@@ -10,17 +10,22 @@ const AddExp = observer(() => {
     return (
         <div>
             {show ? (
-                <div>
+                <div className="flex flex-col px-[5.188rem]">
                     <p>{CVStore.id}</p>
-                    <Position />
-                    <Describe />
-                    <Switch />
+                        <Position />
+                        <Describe />
+                        <Switch />
                 </div>
             ) : (
-                <button onClick={() => setShow(true)}>Add</button>
+                <div className="flex justify-center items-center">
+                    <button
+                    onClick={() => setShow(true)}
+                    >Add</button>
+                </div>
             )}
         </div>
     );
 });
+
 
 export default AddExp;

@@ -13,6 +13,7 @@ const Address = () =>{
             placeholder="YourAddress"
             value={address}
             onChange={(e) => setAddress(CVStore.address = e.target.value)}
+            className="w-[73%] h-[4%]"
             required
             />
         </div>

@@ -8,13 +8,12 @@ const Describe = () => {
     }
 
     return(
-        <div>
             <input
             type="text"
-            value={CVStore.experience[CVStore.id]?.[0] || ""}
+            value={CVStore.experience[CVStore.id]?.[1] || ""}
             onChange={handleDescr}
+            className="h-[4%] w-[73%] mb-5"
             placeholder="Describe"/>
-        </div>
     );
 }
 export default observer(Describe);
