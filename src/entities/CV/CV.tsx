@@ -48,8 +48,8 @@ const CV = () => {
             </div>
 
             <div className="w-[75%] flex flex-col pl-5">
-                <p className="mb-5">{CVStore.title}</p>
-                <p>{CVStore.firstName} {CVStore.lastName}</p>
+                <p className="mb-5 font-medium">{CVStore.title}</p>
+                <p className="font-medium">{CVStore.firstName} {CVStore.lastName}</p>
                 <p>{CVStore.description}</p>
 
                 <hr className="my-5"/>

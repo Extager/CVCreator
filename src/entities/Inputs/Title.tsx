@@ -7,7 +7,7 @@ const Title = () =>{
     const {title, setTitle} = FCTitlte();
 
     return(
-        <div className="">
+        <div className="flex">
             <input
             type="text"
             placeholder="Title"

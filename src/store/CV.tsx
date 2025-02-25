@@ -1,4 +1,5 @@
 import { makeAutoObservable } from "mobx";
+import Avatar from '../shared/img/avatar.svg';
 class Store {
     id:number = 1
     address: string = "Address";
