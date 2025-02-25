@@ -1,6 +1,11 @@
 @media print
 {
     body{
-        
+        width: 100vw;
+        margin: 0;
+    }
+    .save
+    {
+        display: none;
     }
 }

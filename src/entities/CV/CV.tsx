@@ -2,6 +2,7 @@ import { useRef } from "react";
 import { observer } from "mobx-react-lite";
 import { useReactToPrint } from "react-to-print";
 import CVStore from "../../store/CV";
+import '../../shared/styles/CV.css';
 
 const CV = () => {
     const contentRef = useRef<HTMLDivElement>(null);
@@ -14,7 +15,7 @@ const CV = () => {
 
 
     return(
-        <div ref={contentRef} className="w-[50vw] flex h-screen bg-white text-black px-5 py-5">
+        <div ref={contentRef} className="w-[50vw] flex h-screen justify-center bg-white text-black px-5 py-5">
             <div className="w-[25%] flex flex-col">
                 <img src="#" alt="Photo" />
 
@@ -35,32 +36,40 @@ const CV = () => {
                 <p>Email</p>
                 <p>{CVStore.email}</p>
 
+                <div className="flex justify-center ">
+                    <button
+                        onClick={()=>contentSave()}
+                        className="save">
+                            <span>Save</span>
+                    </button>
+                </div>
+
             </div>
 
             <div className="w-[75%] flex flex-col">
                 <p>{CVStore.firstName} {CVStore.lastName}</p>
                 <p>{CVStore.description}</p>
+
                 <hr />
+
                 <p>Work Experience</p>
                 {Object.keys(CVStore.experience).map((id)=>{
                     const el = CVStore.experience[id];
-                    return(
-                        <div key={id}>
-                            <span>{id}. </span>
-                            <span>{el[0]}</span>
-                            <p>{el[1]}</p>
-                        </div>
-                    );
+                    if (el[0].length != 0 || el[1].length != 0){
+                        return(
+                            <div key={id}>
+                                <span>{id}. </span>
+                                <span>{el[0]}</span>
+                                <p>{el[1]}</p>
+                            </div>
+                        );
+                    }
                 })}
+            
             </div>
 
-            <div className="flex">
-                <button
-                onClick={()=>contentSave()}>
-                    <span>Save</span>
-                </button>
+            
 
-            </div>
         </div>
     );
 }
