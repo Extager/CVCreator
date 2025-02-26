@@ -10,7 +10,7 @@ const CV = () => {
 
     const contentSave = useReactToPrint({
         contentRef,
-        documentTitle: "YourCV",
+        documentTitle: CVStore.title,
         bodyClass: "print-style",
     })
 
@@ -18,7 +18,7 @@ const CV = () => {
 
 
     return(
-        <div ref={contentRef} className="w-[50vw] flex h-auto justify-center bg-white text-black px-5 py-5">
+        <div ref={contentRef} className="w-[50vw] flex justify-center bg-white text-black px-5 py-5">
             <div className="w-[25%] flex flex-col gap-3 pr-1 border-r">
                 {imageURL != ""?
                 (
@@ -42,18 +42,25 @@ const CV = () => {
                 }
 
                 <p className="font-medium text-xl text-pretty max-lg:text-balance">PERSONAL DETAILS</p>
-                <p className="font-medium text-lg">Name</p>
+                <p className="font-medium text-lg">Имя</p>
                 <p className="font-thin mb-2">
                     {CVStore.firstName} {CVStore.lastName}
                 </p>
 
-                <p className="font-medium">Address</p>
+                <p className="font-medium">Адресс</p>
                 <p className="font-thin mb-2">
                     {CVStore.address}
                 </p>
 
-                <p className="font-medium text-pretty max-lg:text-balance">Phone number</p>
+                <p className="font-medium text-pretty max-lg:text-balance">Номер телефона</p>
                 <p className="font-thin mb-2">{CVStore.phonenumber}</p>
+
+                <p className="font-medium text-pretty max-lg:text-balance">Дата рождения</p>
+                <p className="font-thin mb-2">{CVStore.birth}</p>
+
+
+                <p className="font-medium text-pretty max-lg:text-balance">GitHub</p>
+                <p className="font-thin mb-2">{CVStore.git}</p>
 
                 <p className="font-medium">Email</p>
                 <p className="font-thin">{CVStore.email}</p>
@@ -69,13 +76,12 @@ const CV = () => {
             </div>
 
             <div className="w-[75%] flex flex-col pl-5">
-                <p className="mb-5 font-medium">{CVStore.title}</p>
                 <p className="font-medium">{CVStore.firstName} {CVStore.lastName}</p>
                 <p>{CVStore.description}</p>
 
-                <hr className="my-5"/>
+                <hr className="my-3"/>
 
-                <p>Work Experience</p>
+                {/* <p className="invisible">Work Experience</p> */}
                 {Object.keys(CVStore.experience).map((id)=>{
                     const el = CVStore.experience[id];
                     if (el[0].length != 0 || el[1].length != 0){
@@ -88,7 +94,17 @@ const CV = () => {
                         );
                     }
                 })}
-            
+
+                <p>Цель</p>
+                <p className="mb-5 font-thin text-pretty max-lg:text-balance">
+                    {CVStore.objective}
+                </p>
+
+                <hr />
+
+                <p>Технические навыки</p>
+                <p></p>
+
             </div>
 
             

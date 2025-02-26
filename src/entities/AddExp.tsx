@@ -12,7 +12,7 @@ const AddExp = observer(() => {
         <div>
             {show ? (
                 <div className="flex flex-col px-[5.188rem]">
-                    <span>{CVStore.id}</span>
+                    <span className="my-2">Number: {CVStore.id}</span>
                     <div className="flex flex-col">
                         <Position />
                         <Describe />

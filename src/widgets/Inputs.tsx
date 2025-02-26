@@ -7,6 +7,11 @@ import PhoneNumber from "../entities/Inputs/PhoneNumber";
 import Title from "../entities/Inputs/Title";
 import AddExp from "../entities/AddExp";
 import Image from "../entities/Inputs/Image";
+import Birth from "../entities/Inputs/Birth";
+import Github from "../entities/Inputs/Github";
+import Objective from "../entities/Inputs/Objective";
+import AddProj from "../entities/AddProj";
+import HardSkills from "../entities/Inputs/HardSkills";
 
 export default function Inputs(){
     return(
@@ -22,9 +27,14 @@ export default function Inputs(){
                 <Email />
                 <PhoneNumber />
                 <Image />
-                <p className="text-2xl">Work Experience</p>
+                <Birth />
+                <Github />
+                <Objective />
+                <HardSkills />
+                <p className="text-2xl mt-10">Work Experience</p>
             </div>
                 <AddExp />
+                <AddProj />
         </div>
     );
 }

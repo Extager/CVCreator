@@ -9,6 +9,21 @@ class Store {
     phonenumber: string = "Phone Number";
     title: string = "Title";
     img:File | null = null;
+    birth: string = "Birthday";
+    git:string = 'Github';
+    objective:string = '';
+    showed:boolean = false;
+    id_proj:number = 1;
+    selected:string = ""
+
+
+    proj: {[key: string]: [string, string] } = {
+        1: ["", ""],
+        2: ["", ""],
+        3: ["", ""],
+    };
+
+
     experience: {[key: string]: [string, string] } = {
         1: ["", ""],
         2: ["", ""],
@@ -41,6 +56,22 @@ class Store {
         this.img = image;
     }
         
+    nextProjId() {
+        if (this.id_proj < Object.keys(this.experience).length) {
+            this.id_proj++;
+        }
+    }
+
+    prevProjID() {
+        if (this.id_proj > 1) {
+            this.id_proj--;
+        }
+    }
+
+    setShowedProj(){
+        this.showed = true;
+    }
+
 }
 const CVStore = new Store();
 export default CVStore;
