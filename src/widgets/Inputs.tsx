@@ -12,6 +12,7 @@ import Github from "../entities/Inputs/Github";
 import Objective from "../entities/Inputs/Objective";
 import AddProj from "../entities/AddProj";
 import HardSkills from "../entities/Inputs/HardSkills";
+import SoftSkills from "../entities/Inputs/SoftSkills";
 
 export default function Inputs(){
     return(
@@ -31,6 +32,8 @@ export default function Inputs(){
                 <Github />
                 <Objective />
                 <HardSkills />
+                <SoftSkills />
+                
                 <p className="text-2xl mt-10">Work Experience</p>
             </div>
                 <AddExp />

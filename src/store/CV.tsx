@@ -14,8 +14,9 @@ class Store {
     objective:string = '';
     showed:boolean = false;
     id_proj:number = 1;
-    selected:string = ""
-
+    selected_HS:string = "";
+    selected_SS:string = "";
+    selected_XYZ:string = "";
 
     proj: {[key: string]: [string, string] } = {
         1: ["", ""],
