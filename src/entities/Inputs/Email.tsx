@@ -13,7 +13,7 @@ const Email = () => {
                 placeholder="Email"
                 value={email}
                 onChange={(e) => setEmail(CVStore.email = e.target.value)}
-                className="w-[73%] h-[4%]"
+                className="w-[73%] h-[4%] my-[15px]"
                 required
             />
         </div>

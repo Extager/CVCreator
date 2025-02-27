@@ -13,7 +13,7 @@ const FirstName = () =>{
             placeholder="First Name"
             value={firstName}
             onChange={(e)=>setFirstName(CVStore.firstName = e.target.value)}
-            className="w-[73%] h-[4%]"
+            className="w-[73%] h-[4%] my-[15px]"
             required
             />
         </div>

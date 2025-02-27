@@ -17,6 +17,7 @@ class Store {
     selected_HS:string = "";
     selected_SS:string = "";
     selected_XYZ:string = "";
+    inform:string = "";
 
     proj: {[key: string]: [string, string] } = {
         1: ["", ""],

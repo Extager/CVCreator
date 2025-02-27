@@ -11,16 +11,15 @@ import Birth from "../entities/Inputs/Birth";
 import Github from "../entities/Inputs/Github";
 import Objective from "../entities/Inputs/Objective";
 import AddProj from "../entities/AddProj";
-import HardSkills from "../entities/Inputs/HardSkills";
-import SoftSkills from "../entities/Inputs/SoftSkills";
-import XYZ from "../entities/Inputs/XYZ";
+import Skills from "../entities/Skills";
+import AddInfo from "../entities/Inputs/AddInfo";
 
 export default function Inputs(){
     return(
         <div className="flex flex-col w-[50vw] h-screen py-5">
             <p className="text-3xl font-medium text-center mb-[2.625rem]">СV Creator</p>
             <div className="px-[5.188rem]">
-                <p className="text-2xl">Personal information</p>
+                <p className="text-2xl mb-5">Personal information</p>
                 <Title />
                 <FirstName />
                 <LastName />
@@ -32,9 +31,8 @@ export default function Inputs(){
                 <Birth />
                 <Github />
                 <Objective />
-                <HardSkills />
-                <SoftSkills />
-                <XYZ />
+                <AddInfo />
+                <Skills />
                 <p className="text-2xl mt-10">Work Experience</p>
             </div>
                 <AddExp />

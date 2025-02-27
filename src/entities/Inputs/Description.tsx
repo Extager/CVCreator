@@ -13,7 +13,7 @@ const Description = () =>{
             placeholder="Desctiption"
             value={description}
             onChange={(e)=>setDescription(CVStore.description = e.target.value)}
-            className="w-[73%] h-[4%]"
+            className="w-[73%] h-[4%] my-[15px]"
             required
             />
         </div>

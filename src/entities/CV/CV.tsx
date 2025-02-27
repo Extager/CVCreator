@@ -5,6 +5,8 @@ import CVStore from "../../store/CV";
 import '../../shared/styles/CV.css';
 import '../../shared/styles/Btn.css';
 import Avatar from '../../shared/img/avatar.svg';
+import Skills from "../Skills";
+
 const CV = () => {
     const contentRef = useRef<HTMLDivElement>(null);
 
@@ -18,7 +20,7 @@ const CV = () => {
 
 
     return(
-        <div ref={contentRef} className="w-[50vw] flex justify-center bg-white text-black px-5 py-5">
+        <div ref={contentRef} className="w-[50vw] flex h-screen justify-center bg-white text-black px-5 py-5">
             <div className="w-[25%] flex flex-col gap-3 pr-1 border-r">
                 {imageURL != ""?
                 (
@@ -47,7 +49,7 @@ const CV = () => {
                     {CVStore.firstName} {CVStore.lastName}
                 </p>
 
-                <p className="font-medium">Адресс</p>
+                <p className="font-medium">Адрес</p>
                 <p className="font-thin mb-2">
                     {CVStore.address}
                 </p>
@@ -81,7 +83,8 @@ const CV = () => {
 
                 <hr className="my-3"/>
 
-                {/* <p className="invisible">Work Experience</p> */}
+                <p>Work Experience</p>
+
                 {Object.keys(CVStore.experience).map((id)=>{
                     const el = CVStore.experience[id];
                     if (el[0].length != 0 || el[1].length != 0){
@@ -95,16 +98,25 @@ const CV = () => {
                     }
                 })}
 
+                <hr className="my-3"/>
+
                 <p>Цель</p>
                 <p className="mb-5 font-thin text-pretty max-lg:text-balance">
                     {CVStore.objective}
                 </p>
 
-                <hr />
+                <hr className="mb-3"/>
 
-                <p>Технические навыки</p>
-                <p></p>
+                <p className="mb-5">Технические навыки</p>
+                <Skills />
 
+                <hr className="my-3"/>
+
+                <p className="mb-5">Дополнительная информация</p>
+
+                <p className="mb-5 font-thin text-pretty max-lg:text-balance">
+                    {CVStore.inform}
+                </p>
             </div>
 
             

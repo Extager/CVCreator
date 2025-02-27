@@ -3,39 +3,37 @@ import CVStore from "../../store/CV";
 
 const SoftSkills = () => {
     return(
-        <div className="flex ">
-            <div className="flex justify-center items-center">
-                <span className="mr-3">Soft Skills:</span>
-            </div>
-            <div className="flex gap-2 items-center align-middle">
-                <input
+        <div className="flex gap-2 items-center align-middle">
+            <input
                 type="radio"
                 value="A"
                 checked={CVStore.selected_SS == "A"}
                 onChange={(e)=>CVStore.selected_SS = e.target.value}
                 className="mt-0"
-                />
+            />
 
-                <input
+            <input
                 type="radio"
                 value="B"
                 checked={CVStore.selected_SS == "B"}
                 onChange={(e)=>CVStore.selected_SS = e.target.value}
-                className="mt-0"/>
+                className="mt-0"
+            />
 
-                <input
+            <input
                 type="radio"
                 value="C"
                 checked={CVStore.selected_SS == "C"}
-                onChange={(e)=>CVStore.selected_SS = e.target.value}/>
+                onChange={(e)=>CVStore.selected_SS = e.target.value}
+            />
 
-                <input
+            <input
                 type="radio"
                 value="D"
                 checked={CVStore.selected_SS == "D"}
-                onChange={(e)=>CVStore.selected_SS = e.target.value}/>
-            </div>
-            </div>
+                onChange={(e)=>CVStore.selected_SS = e.target.value}
+            />
+        </div>
 
     );
 }

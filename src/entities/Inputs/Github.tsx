@@ -6,10 +6,11 @@ const GitHub = () =>{
     return(
         <input
         type="text" 
-        className='h-[4%] w-[73%]'
+        className='h-[4%] w-[73%] my-[15px]'
         placeholder='Github'
         value={CVStore.git}
-        onChange={(e)=>CVStore.git = e.target.value}/>
+        onChange={(e)=>CVStore.git = e.target.value}
+        />
     );
 }
 export default observer(GitHub);

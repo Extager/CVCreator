@@ -12,7 +12,7 @@ const Image = () =>{
         type="file"
         accept="image/*"
         onChange={changeImg}
-        className="w-[73%]"
+        className="w-[73%] my-[15px]"
         />
     );
 }

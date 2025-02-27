@@ -6,7 +6,7 @@ const Objective = () =>{
     return(
         <input
         type="text"
-        className="w-[73%] h-[4%]"
+        className="w-[73%] h-[4%] mb-[15px]"
         value={CVStore.objective || ''}
         onChange={(e)=>CVStore.objective = e.target.value}
         placeholder="Objective"
