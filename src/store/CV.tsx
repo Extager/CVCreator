@@ -10,7 +10,6 @@ class Store {
     title: string = "Title";
     img:File | null = null;
     birth: string = "";
-    git:string = '';
     objective:string = '';
     showed:boolean = false;
     id_proj:number = 1;
